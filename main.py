@@ -32,6 +32,8 @@ def gate(line: str) -> str:
         raise ValueError("joke must be a single line")
     if text.count(".") != 1 or not text.endswith("."):
         raise ValueError("joke must be exactly one sentence")
+    if "cat" not in text.lower():
+        raise ValueError("joke must be about cats")
     return text
 
 
